@@ -1,12 +1,10 @@
 package com.task.sumerge;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Service;
-
+import com.task.recommender.CourseRecommender;
+import com.task.recommender.Course;
 import java.util.*;
 
-@Service //@Component
 
 public class CourseService {
     CourseRecommender courseRecommender;
@@ -14,7 +12,7 @@ public class CourseService {
     private CourseRecommender courseRecommenderImpl; // By variable name
 
     @Autowired
-    public CourseService( @Qualifier("courseRecommenderImpl2") CourseRecommender courseRecommender) { // using qualifier
+    public CourseService( CourseRecommender courseRecommender) { // using qualifier
         this.courseRecommender = courseRecommender;
     }
 

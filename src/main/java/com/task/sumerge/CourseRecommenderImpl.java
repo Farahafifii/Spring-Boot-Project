@@ -1,8 +1,8 @@
 package com.task.sumerge;
-import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.List;
+import com.task.recommender.CourseRecommender;
+import com.task.recommender.Course;
 
 
 public class CourseRecommenderImpl implements CourseRecommender {
