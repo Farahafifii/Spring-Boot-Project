@@ -1,0 +1,4 @@
+com\task\recommender\App.class
+com\task\recommender\Course.class
+com\task\recommender\CourseRecommender.class
+com\task\recommender\CourseRecommenderImpl2.class
