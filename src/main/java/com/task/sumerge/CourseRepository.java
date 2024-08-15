@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 @Repository
 public class CourseRepository {
@@ -24,6 +25,11 @@ public class CourseRepository {
     public Course viewCourse(int id) {
         String sql = "SELECT * FROM Course WHERE id = ?";
         return jdbcTemplate.queryForObject(sql, new CourseRowMapper(), id);
+    }
+
+    public List<Course> discoverCourses() {
+        String sql = "select* from course WHERE name Like 'Python%' ";
+        return jdbcTemplate.query(sql, new CourseRowMapper());
     }
 
     // Method to update an existing course

@@ -1,4 +1,4 @@
-package com.task.sumerge;
+package com.task.sumerge.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

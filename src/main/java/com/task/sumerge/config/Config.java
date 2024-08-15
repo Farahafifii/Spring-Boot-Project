@@ -1,7 +1,8 @@
-package com.task.sumerge;
+package com.task.sumerge.config;
 
 import com.task.recommender.CourseRecommenderImpl2;
 import com.task.recommender.CourseRecommender;
+import com.task.sumerge.CourseRecommenderImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
