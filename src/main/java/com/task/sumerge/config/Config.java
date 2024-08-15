@@ -1,16 +1,15 @@
-package com.task.sumerge;
+package com.task.sumerge.config;
 
-import com.task.sumerge.CourseRecommender;
+import com.task.recommender.CourseRecommenderImpl2;
+import com.task.recommender.CourseRecommender;
 import com.task.sumerge.CourseRecommenderImpl;
-import com.task.sumerge.CourseRecommenderImpl2;
-import com.task.sumerge.CourseService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 @Configuration
-@ComponentScan("com.task.sumerge")
+@ComponentScan(basePackages = "com.task.sumerge")
 public class Config {
 
     @Bean
@@ -21,6 +20,7 @@ public class Config {
 
     @Bean
     public CourseRecommender courseRecommenderImpl2() {
-        return new CourseRecommenderImpl2();
+        return  new CourseRecommenderImpl2();
     }
+
 }
