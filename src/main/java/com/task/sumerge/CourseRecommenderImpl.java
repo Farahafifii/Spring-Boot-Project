@@ -8,6 +8,6 @@ import com.task.recommender.Course;
 public class CourseRecommenderImpl implements CourseRecommender {
     @Override
     public List<Course> recommendedCourses() {
-        return Arrays.asList(new Course("Python Basic"), new Course("Python Advanced"));
+        return Arrays.asList(new Course(), new Course());
     }
 }
