@@ -1,6 +1,5 @@
 package com.task.recommender;
 
-import java.util.List;
 
 public class Course {
     private int id;
@@ -8,17 +7,16 @@ public class Course {
     private String description;
     private int credit;
 
-    // Constructors
-    public Course() {
-    }
 
-    public Course(String name, String description, int credit) {
+    public Course() {}
+
+    public Course( String name, String description, int credit) {
         this.name = name;
         this.description = description;
         this.credit = credit;
     }
 
-    // Getters and Setters
+    // Getters and setters
     public int getId() {
         return id;
     }
@@ -49,16 +47,5 @@ public class Course {
 
     public void setCredit(int credit) {
         this.credit = credit;
-    }
-
-    // Override toString() method for easier debugging
-    @Override
-    public String toString() {
-        return "Course{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", credit=" + credit +
-                '}';
     }
 }
