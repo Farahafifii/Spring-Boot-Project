@@ -1,8 +1,9 @@
 package com.task.sumerge.controller;
 
-import com.task.recommender.Course;
-import com.task.sumerge.CourseService;
+import com.task.sumerge.dto.CourseDTO;
+import com.task.sumerge.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -15,12 +16,12 @@ public class CourseController {
     private CourseService courseService;
 
     @PostMapping("/add")
-    public void addCourse(@RequestBody Course course) {
+    public void addCourse(@RequestBody CourseDTO course) {
         courseService.addCourse(course);
     }
 
     @PutMapping("/update/{id}")
-    public void updateCourse(@PathVariable int id, @RequestBody Course course) {
+    public void updateCourse(@PathVariable int id, @RequestBody CourseDTO course) {
         course.setId(id);
         courseService.updateCourse(course);
     }
@@ -31,12 +32,20 @@ public class CourseController {
     }
 
     @GetMapping("/view/{id}")
-    public Course viewCourse(@PathVariable int id) {
+    public CourseDTO viewCourse(@PathVariable int id) {
         return courseService.viewCourse(id);
     }
+
     @GetMapping("/discover")
-    public List<Course> discoverCourses() {
-        return courseService.getRecommendedCourses();
+    public List<CourseDTO> discoverCourses() {
+        return courseService.discoverCourses("Python");
+    }
+
+    @GetMapping("/findAll")
+    public List<CourseDTO> findAllCourses(
+            @RequestParam(name = "page", defaultValue = "0") int page,
+            @RequestParam(name = "size", defaultValue = "10") int size) {
+        return courseService.findAllCourses(page, size);
     }
 
 }
