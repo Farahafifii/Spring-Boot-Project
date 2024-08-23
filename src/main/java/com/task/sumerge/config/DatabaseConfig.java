@@ -10,6 +10,7 @@ import javax.sql.DataSource;
 
 @Configuration
 @EnableJpaRepositories(basePackages = "com.task.sumerge.repository")
+//@EntityScan(basePackages = "com.task.recommender.entity")
 public class DatabaseConfig {
 
     @Bean
