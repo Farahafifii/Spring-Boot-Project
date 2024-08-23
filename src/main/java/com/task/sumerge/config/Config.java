@@ -1,6 +1,5 @@
 package com.task.sumerge.config;
 
-import com.task.recommender.CourseRecommenderImpl2;
 import com.task.recommender.CourseRecommender;
 import com.task.sumerge.CourseRecommenderImpl;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -18,11 +17,6 @@ public class Config {
     @Primary
     public CourseRecommender courseRecommenderImpl() {
         return new CourseRecommenderImpl();
-    }
-
-    @Bean
-    public CourseRecommender courseRecommenderImpl2() {
-        return  new CourseRecommenderImpl2();
     }
 
 }

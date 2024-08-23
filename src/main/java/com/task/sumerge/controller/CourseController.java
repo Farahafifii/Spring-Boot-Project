@@ -3,7 +3,6 @@ package com.task.sumerge.controller;
 import com.task.sumerge.dto.CourseDTO;
 import com.task.sumerge.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -46,6 +45,11 @@ public class CourseController {
             @RequestParam(name = "page", defaultValue = "0") int page,
             @RequestParam(name = "size", defaultValue = "10") int size) {
         return courseService.findAllCourses(page, size);
+    }
+
+    @GetMapping("/getAll")
+    public List<CourseDTO> getAllCourses() {
+        return courseService.getAllCourses();
     }
 
 }

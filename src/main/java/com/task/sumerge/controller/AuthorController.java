@@ -12,9 +12,13 @@ public class AuthorController {
     @Autowired
     private AuthorService authorService;
 
-    @GetMapping("/find/{email}")
-    public AuthorDTO getAuthor(@PathVariable String email) {
+    @GetMapping("/findByEmail/{email}")
+    public AuthorDTO getAuthorByEmail(@PathVariable String email) {
         return authorService.getAuthorByEmail(email);
     }
 
+    @GetMapping("/findById/{id}")
+    public AuthorDTO getAuthorById(@PathVariable int id) {
+        return authorService.getAuthorById(id);
+    }
 }
