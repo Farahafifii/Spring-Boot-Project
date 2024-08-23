@@ -1,6 +1,6 @@
 package com.task.recommender.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 @Entity
 @Table(name = "assessment")
 public class AssessmentEntity {

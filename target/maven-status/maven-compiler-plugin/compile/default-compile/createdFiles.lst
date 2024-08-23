@@ -2,7 +2,6 @@ com\task\recommender\App.class
 com\task\recommender\CourseRecommender.class
 com\task\recommender\CourseRecommenderImpl2.class
 com\task\recommender\entity\CourseEntity.class
-com\task\recommender\Course.class
 com\task\recommender\entity\AuthorEntity.class
 com\task\recommender\entity\AssessmentEntity.class
 com\task\recommender\entity\RatingEntity.class
