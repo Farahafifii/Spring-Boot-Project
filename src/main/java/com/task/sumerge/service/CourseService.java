@@ -38,6 +38,9 @@ public class CourseService {
     }
 
     private void validateCourseDTO(CourseDTO courseDTO) {
+        if (courseDTO.getId() != 0) { // Assuming ID should be zero if not set
+            throw new IllegalArgumentException("ID should not be provided during creation.");
+        }
         if (courseDTO.getName() == null || courseDTO.getName().isEmpty()) {
             throw new BadRequestException("Course name cannot be null or empty");
         }
