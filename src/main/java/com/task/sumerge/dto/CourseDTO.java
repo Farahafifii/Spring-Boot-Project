@@ -1,6 +1,9 @@
 package com.task.sumerge.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class CourseDTO {
+    @JsonIgnore
     private int id;
     private String name;
     private String description;
